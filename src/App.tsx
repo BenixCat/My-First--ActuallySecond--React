@@ -1,10 +1,10 @@
-import Button from "./components/Button";
+import AlertBtn from "./components/AlertButton";
 function App() {
   return (
     <div>
-      <Button color="danger" onClick={() => console.log("clicked")}>
+      <AlertBtn color="danger" onClick={() => console.log("clicked")}>
         Primary
-      </Button>
+      </AlertBtn>
     </div>
   );
 }
