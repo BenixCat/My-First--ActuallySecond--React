@@ -3,10 +3,10 @@ import { ReactNode } from "react";
 interface Props {
   children: ReactNode;
   color?: "primary" | "secondary" | "danger";
-  onClick: () => void;
+  onClose: () => void;
 }
 
-const AlertBtn = ({ children, onClick, color = "primary" }: Props) => {
+const AlertBtn = ({ children, color = "primary", onClose }: Props) => {
   return (
     <div
       className={"alert alert-" + color + " alert-dismissible fade show"}
@@ -19,7 +19,7 @@ const AlertBtn = ({ children, onClick, color = "primary" }: Props) => {
         className="btn-close"
         data-bs-dismiss="alert"
         aria-label="Close"
-        onClick={onClick}
+        onClick={onClose}
       ></button>
     </div>
   );
